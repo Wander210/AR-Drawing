@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.gdd.drawing.presentation.screen.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_galleryFragment"
+            app:destination="@id/galleryFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_libraryFragment"
+            app:destination="@id/libraryFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_cameraFragment"
+            app:destination="@id/cameraFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_drawingTypeSheet"
+            app:destination="@id/drawingTypeSheet" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.gdd.drawing.presentation.screen.splash.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_languageFragment"
+            app:destination="@id/languageFragment" />
+        <action
+            android:id="@+id/action_splashFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/languageFragment"
+        android:name="com.gdd.drawing.presentation.screen.language.LanguageFragment"
+        android:label="fragment_language"
+        tools:layout="@layout/fragment_language" >
+        <action
+            android:id="@+id/action_languageFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.gdd.drawing.presentation.screen.welcome.WelcomeFragment"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome" >
+        <action
+            android:id="@+id/action_welcomeFragment_to_galleryFragment"
+            app:destination="@id/galleryFragment" />
+        <action
+            android:id="@+id/action_welcomeFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/galleryFragment"
+        android:name="com.gdd.drawing.presentation.screen.gallery.GalleryFragment"
+        android:label="fragment_gallery"
+        tools:layout="@layout/fragment_gallery" />
+    <fragment
+        android:id="@+id/libraryFragment"
+        android:name="com.gdd.drawing.presentation.screen.library.LibraryFragment"
+        android:label="fragment_library"
+        tools:layout="@layout/fragment_library" />
+    <fragment
+        android:id="@+id/cameraFragment"
+        android:name="com.gdd.drawing.presentation.screen.camera.CameraFragment"
+        android:label="fragment_camera"
+        tools:layout="@layout/fragment_camera" />
+    <fragment
+        android:id="@+id/tracingFragment"
+        android:name="com.gdd.drawing.presentation.screen.tracing.TracingFragment"
+        android:label="fragment_tracing"
+        tools:layout="@layout/fragment_tracing" />
+    <fragment
+        android:id="@+id/sketchingFragment"
+        android:name="com.gdd.drawing.presentation.screen.sketching.SketchingFragment"
+        android:label="fragment_sketching"
+        tools:layout="@layout/fragment_sketching" />
+    <dialog
+        android:id="@+id/drawingTypeSheet"
+        android:name="com.gdd.drawing.presentation.dialog.DrawingTypeSheet"
+        android:label="drawing_type_sheet"
+        tools:layout="@layout/fragment_drawing_type_sheet"
+        app:dialogTheme="@style/Theme.MaterialComponents.BottomSheetDialog" >
+
+        <action
+            android:id="@+id/action_drawingTypeSheet_to_sketchingFragment"
+            app:destination="@id/sketchingFragment" />
+        <action
+            android:id="@+id/action_drawingTypeSheet_to_tracingFragment"
+            app:destination="@id/tracingFragment" />
+    </dialog>
+</navigation>
