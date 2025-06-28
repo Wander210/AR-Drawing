@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.gdd.drawing"
+    namespace = "com.gdd.ardrawing"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.gdd.drawing"
+        applicationId = "com.gdd.ardrawing"
         minSdk = 24
         targetSdk = 35
         versionCode = 1

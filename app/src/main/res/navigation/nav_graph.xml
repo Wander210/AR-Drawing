@@ -6,7 +6,7 @@
     app:startDestination="@id/splashFragment">
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.gdd.drawing.presentation.screen.home.HomeFragment"
+        android:name="com.gdd.ardrawing.presentation.screen.home.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -24,7 +24,7 @@
     </fragment>
     <fragment
         android:id="@+id/splashFragment"
-        android:name="com.gdd.drawing.presentation.screen.splash.SplashFragment"
+        android:name="com.gdd.ardrawing.presentation.screen.splash.SplashFragment"
         android:label="fragment_splash"
         tools:layout="@layout/fragment_splash" >
         <action
@@ -36,7 +36,7 @@
     </fragment>
     <fragment
         android:id="@+id/languageFragment"
-        android:name="com.gdd.drawing.presentation.screen.language.LanguageFragment"
+        android:name="com.gdd.ardrawing.presentation.screen.language.LanguageFragment"
         android:label="fragment_language"
         tools:layout="@layout/fragment_language" >
         <action
@@ -45,7 +45,7 @@
     </fragment>
     <fragment
         android:id="@+id/welcomeFragment"
-        android:name="com.gdd.drawing.presentation.screen.welcome.WelcomeFragment"
+        android:name="com.gdd.ardrawing.presentation.screen.welcome.WelcomeFragment"
         android:label="fragment_welcome"
         tools:layout="@layout/fragment_welcome" >
         <action
@@ -57,32 +57,32 @@
     </fragment>
     <fragment
         android:id="@+id/galleryFragment"
-        android:name="com.gdd.drawing.presentation.screen.gallery.GalleryFragment"
+        android:name="com.gdd.ardrawing.presentation.screen.gallery.GalleryFragment"
         android:label="fragment_gallery"
         tools:layout="@layout/fragment_gallery" />
     <fragment
         android:id="@+id/libraryFragment"
-        android:name="com.gdd.drawing.presentation.screen.library.LibraryFragment"
+        android:name="com.gdd.ardrawing.presentation.screen.library.LibraryFragment"
         android:label="fragment_library"
         tools:layout="@layout/fragment_library" />
     <fragment
         android:id="@+id/cameraFragment"
-        android:name="com.gdd.drawing.presentation.screen.camera.CameraFragment"
+        android:name="com.gdd.ardrawing.presentation.screen.camera.CameraFragment"
         android:label="fragment_camera"
         tools:layout="@layout/fragment_camera" />
     <fragment
         android:id="@+id/tracingFragment"
-        android:name="com.gdd.drawing.presentation.screen.tracing.TracingFragment"
+        android:name="com.gdd.ardrawing.presentation.screen.tracing.TracingFragment"
         android:label="fragment_tracing"
         tools:layout="@layout/fragment_tracing" />
     <fragment
         android:id="@+id/sketchingFragment"
-        android:name="com.gdd.drawing.presentation.screen.sketching.SketchingFragment"
+        android:name="com.gdd.ardrawing.presentation.screen.sketching.SketchingFragment"
         android:label="fragment_sketching"
         tools:layout="@layout/fragment_sketching" />
     <dialog
         android:id="@+id/drawingTypeSheet"
-        android:name="com.gdd.drawing.presentation.dialog.DrawingTypeSheet"
+        android:name="com.gdd.ardrawing.presentation.dialog.DrawingTypeSheet"
         android:label="drawing_type_sheet"
         tools:layout="@layout/fragment_drawing_type_sheet"
         app:dialogTheme="@style/Theme.MaterialComponents.BottomSheetDialog" >
