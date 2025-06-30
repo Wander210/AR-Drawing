@@ -2,14 +2,19 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     id("androidx.navigation.safeargs.kotlin")
+    id("kotlin-kapt")
+    id("com.google.dagger.hilt.android")
 }
 
+kapt {
+    correctErrorTypes = true
+}
 android {
-    namespace = "com.gdd.ardrawing"
+    namespace = "com.gdd.ar_drawing"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.gdd.ardrawing"
+        applicationId = "com.gdd.ar_drawing"
         minSdk = 24
         targetSdk = 35
         versionCode = 1
@@ -44,6 +49,11 @@ dependencies {
     val nav_version = "2.9.0"
     implementation("androidx.navigation:navigation-fragment:$nav_version")
     implementation("androidx.navigation:navigation-ui:$nav_version")
+
+    implementation("androidx.core:core-splashscreen:1.0.0-beta02")
+
+    implementation("com.google.dagger:hilt-android:2.56.2")
+    kapt("com.google.dagger:hilt-android-compiler:2.56.2")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
