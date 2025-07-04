@@ -7,4 +7,5 @@
     <string name="ar_drawing">AR Drawing 🖌️</string>
     <string name="recent_drawings">Recent Drawings</string>
     <string name="watch_all">Watch all</string>
+    <string name="category">Category</string>
 </resources>

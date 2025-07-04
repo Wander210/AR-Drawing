@@ -1,11 +1,11 @@
 package com.gdd.ar_drawing.app
 
 import android.app.Application
-import dagger.hilt.android.HiltAndroidApp
+import com.gdd.ar_drawing.preference.MyPreferences
 
-@HiltAndroidApp
 class MyApplication : Application() {
     override fun onCreate() {
         super.onCreate()
+        MyPreferences.init(this)
     }
 }

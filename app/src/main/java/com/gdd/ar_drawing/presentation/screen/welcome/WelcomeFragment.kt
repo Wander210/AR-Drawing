@@ -8,14 +8,18 @@ import com.gdd.ar_drawing.base.BaseFragment
 import com.gdd.ar_drawing.databinding.FragmentWelcomeBinding
 
 class WelcomeFragment : BaseFragment<FragmentWelcomeBinding>(FragmentWelcomeBinding::inflate) {
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+    override fun initData() {
+    }
+
+    override fun setUpView() {
+    }
+
+    override fun setUpListener() {
         binding.btnHome.setOnClickListener {
             navigateTo(R.id.homeFragment)
         }
 
         binding.btnExplore.setOnClickListener {
             navigateTo(R.id.galleryFragment)
-        }
-    }
+        }    }
 }

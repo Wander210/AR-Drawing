@@ -9,14 +9,8 @@ import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import com.gdd.ar_drawing.databinding.ActivityMainBinding
 import com.gdd.ar_drawing.utils.LanguageUtil
-import dagger.hilt.android.AndroidEntryPoint
-import javax.inject.Inject
 
-@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
-
-    @Inject
-    lateinit var languageUtil: LanguageUtil
 
     private val viewModel: MainViewModel by viewModels()
     private lateinit var binding: ActivityMainBinding
@@ -24,7 +18,6 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        languageUtil.setLanguage(this)
         enableEdgeToEdge()
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)

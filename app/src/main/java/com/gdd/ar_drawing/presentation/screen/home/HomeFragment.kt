@@ -1,15 +1,27 @@
 package com.gdd.ar_drawing.presentation.screen.home
 
-import android.os.Bundle
-import android.view.View
-import androidx.navigation.findNavController
 import com.gdd.ar_drawing.R
 import com.gdd.ar_drawing.base.BaseFragment
 import com.gdd.ar_drawing.databinding.FragmentHomeBinding
+import com.gdd.ar_drawing.epoxy.controller.RecentListController
+import com.gdd.ar_drawing.utils.DataUtil
 
 class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::inflate) {
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+
+    private lateinit var controller: RecentListController
+
+    override fun initData() {
+        controller = RecentListController { imageClicked ->
+            navigateTo(R.id.drawingTypeSheet)
+        }
+        controller.listImage = DataUtil.getRecentList()
+    }
+
+    override fun setUpView() {
+        binding.recentListRecyclerView.setControllerAndBuildModels(controller)
+    }
+
+    override fun setUpListener() {
         binding.btnCamera.setOnClickListener {
             navigateTo(R.id.cameraFragment)
         }
@@ -17,10 +29,6 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
         binding.btnLibrary.setOnClickListener {
             navigateTo(R.id.libraryFragment)
 
-        }
-
-        binding.ivRecent1.setOnClickListener {
-            navigateTo(R.id.drawingTypeSheet)
         }
 
         binding.ivCategory1.setOnClickListener {

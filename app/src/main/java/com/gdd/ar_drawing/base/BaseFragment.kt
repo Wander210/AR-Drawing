@@ -26,6 +26,17 @@ abstract class BaseFragment<BINDING : ViewBinding>(private val bindingInflater: 
         return binding.root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        initData()
+        setUpView()
+        setUpListener()
+    }
+
+    abstract fun initData()
+    abstract fun setUpView()
+    abstract fun setUpListener()
+
     /**
      * Navigate to other fragment
      * @param id Fragment id to move to

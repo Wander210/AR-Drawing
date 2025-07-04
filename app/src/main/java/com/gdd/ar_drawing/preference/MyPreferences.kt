@@ -3,14 +3,15 @@ package com.gdd.ar_drawing.preference
 import android.content.Context
 import android.content.SharedPreferences
 
-class MyPreferences(context: Context) {
-    private val prefs: SharedPreferences =
-        context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+object MyPreferences {
+    private lateinit var prefs: SharedPreferences
+    private const val PREFS_NAME = "AR_Drawing_Prefs"
+    const val PREF_LANGUAGE = "pref_language"
 
-    companion object {
-        private const val PREFS_NAME = "AR_Drawing_Prefs"
-        const val PREF_LANGUAGE = "pref_language"
+    fun init(context: Context) {
+        prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
     }
+
 
     fun read(key: String, value: String?): String? {
         return prefs.getString(key, value)

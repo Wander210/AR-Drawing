@@ -42,10 +42,15 @@ android {
 
     buildFeatures{
         viewBinding = true
+        dataBinding = true
+
     }
 }
 
 dependencies {
+    implementation("com.intuit.ssp:ssp-android:1.1.1")
+    implementation("com.intuit.sdp:sdp-android:1.1.1")
+
     val nav_version = "2.9.0"
     implementation("androidx.navigation:navigation-fragment:$nav_version")
     implementation("androidx.navigation:navigation-ui:$nav_version")
@@ -54,6 +59,16 @@ dependencies {
 
     implementation("com.google.dagger:hilt-android:2.56.2")
     kapt("com.google.dagger:hilt-android-compiler:2.56.2")
+
+    implementation("com.airbnb.android:epoxy:5.1.4")
+    kapt("com.airbnb.android:epoxy-processor:5.1.4")
+    implementation("com.airbnb.android:epoxy-databinding:5.1.4")
+
+    // Layout error alignment library for horizontal epoxy model
+    implementation("com.github.rubensousa:gravitysnaphelper:2.2.2")
+
+    // Glide
+    implementation("com.github.bumptech.glide:glide:4.16.0")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
